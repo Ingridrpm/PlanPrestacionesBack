@@ -1,0 +1,47 @@
+server:
+  port: 8079
+  compression:
+    enabled: true
+    min-response-size: 1024 
+  
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    show-sql: true
+    hibernate:     
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:    
+      hibernate: 
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/DBREPORTES  
+    username: root
+    password: 123
+    
+#url: jdbc:mariadb://10.50.47.200:3306/DBREPORTES  
+#username: db_usuario
+#password: asdf1234
+#
+    
+#spring.jpa.show-sql=false
+#spring.jpa.hibernate.ddl-auto=update
+#spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+#spring.datasource.url=jdbc:mariadb://localhost:3306/mediappbd
+#spring.datasource.username=root
+#spring.datasource.password=123
+    
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://10.50.47.190:8761/eureka/ # http://10.50.47.190:8761/eureka/  http://10.50.47.211/eureka/eureka
+
+#para seguridad
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://10.50.47.190:9999/user # http://10.50.47.190:9999/user  http://10.50.47.211/authserver/user
+
