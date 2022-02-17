@@ -80,8 +80,8 @@ public class Contrat {
 	@Column(name = "fiador", nullable = true)
 	private Long fiador;
 	
-	@ApiModelProperty(notes = "FINAL")
-	@Column(name = "final", nullable = true)
+	@ApiModelProperty(notes = "FINAL1")
+	@Column(name = "final1", nullable = true)
 	private Long final1;
 	
 	@ApiModelProperty(notes = "SALDO")

@@ -14,7 +14,8 @@ public interface InfoCorteDTO {
 	public Double getCuota();
 	public Long getRegistro_contrat();
 	public Long getRegistro();
-	public Double getTasai();
+	public Double getPorcent();
 	public Long getFinal1();
 	public Long getContrato_anterior();
+	public Double getSeguro();
 }

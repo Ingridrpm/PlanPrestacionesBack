@@ -9,7 +9,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 public class CorteDTO {
 
 	/*p.fecha as fecha_asignacion, p.cheque, p.plazo, p.fiador, p.actual as contrato, \r\n" + 
-			"p.inicio, p.monto, i.cuota, p.registro as registro_contrat, i.registro, i.tasai as porcent, p.`final`, p.anter as contrato_anterior*/
+			"p.inicio, p.monto, i.cuota, p.registro as registro_contrat, i.registro, i.porcent as porcent, p.`final`, p.anter as contrato_anterior*/
 	
 	@JsonSerialize(using = LocalDateSerializer.class)
 	@JsonFormat(pattern = "dd/MM/yyyy")
@@ -24,10 +24,17 @@ public class CorteDTO {
 	private Double cuota;
 	private Long registro_contrat;
 	private Long registro;
-	private Double tasai;
+	private Double porcent;
 	private Long final1;
 	private Long contrato_anterior;
+	private Double seguro;
 	
+	public Double getSeguro() {
+		return seguro;
+	}
+	public void setSeguro(Double seguro) {
+		this.seguro = seguro;
+	}
 	public LocalDate getFecha_asignacion() {
 		return fecha_asignacion;
 	}
@@ -88,11 +95,11 @@ public class CorteDTO {
 	public void setRegistro(Long registro) {
 		this.registro = registro;
 	}
-	public Double getTasai() {
-		return tasai;
+	public Double getPorcent() {
+		return porcent;
 	}
-	public void setTasai(Double tasai) {
-		this.tasai = tasai;
+	public void setPorcent(Double porcent) {
+		this.porcent = porcent;
 	}
 	public Long getFinal1() {
 		return final1;

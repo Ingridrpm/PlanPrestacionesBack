@@ -18,7 +18,7 @@ public interface ICorteRepository extends JpaRepository<Corte, Long>{
 	
 	//Registro
 	@Query(value = "select p.fecha as fecha_asignacion, p.cheque, p.plazo, p.fiador, p.actual as contrato, \r\n" + 
-			"p.inicio, p.monto, i.cuota, p.registro as registro_contrat, i.registro, i.tasai as porcent, p.`final`, p.anter as contrato_anterior\r\n" + 
+			"p.inicio, p.monto, i.cuota, p.registro as registro_contrat, i.registro, i.tasai as porcent, p.final1, p.anter as contrato_anterior, p.seguro\r\n" + 
 			"from contrat p, corte i\r\n" + 
 			"where p.actual = i.actual \r\n" + 
 			"and p.actual = :contrato", nativeQuery = true)

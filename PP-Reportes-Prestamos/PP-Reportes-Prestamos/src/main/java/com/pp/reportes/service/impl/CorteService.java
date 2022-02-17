@@ -70,9 +70,10 @@ public class CorteService implements ICorteService {
 			nu.setCuota(ia.getCuota());
 			nu.setRegistro_contrat(ia.getRegistro_contrat());
 			nu.setRegistro(ia.getRegistro());
-			nu.setTasai(ia.getTasai());
+			nu.setPorcent(ia.getPorcent());
 			nu.setFinal1(ia.getFinal1());
 			nu.setContrato_anterior(ia.getContrato_anterior());
+			nu.setSeguro(ia.getSeguro());
 
 			lis.add(nu);
 		}
