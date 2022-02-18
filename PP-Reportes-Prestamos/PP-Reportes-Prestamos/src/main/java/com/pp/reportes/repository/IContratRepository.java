@@ -17,7 +17,7 @@ public interface IContratRepository extends JpaRepository<Contrat, Long>{
 	
 	//Registro
 	@Query(value = "select * from contrat\r\n" + 
-			"where registro = :registro", nativeQuery = true)
+			"where deudor = :registro", nativeQuery = true)
 	List<InfoContrat> contratPorRegistro(
 			@Param("registro") String registro
 			);
